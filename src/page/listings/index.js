@@ -7,6 +7,7 @@ const Box = styled.div`
   flex-grow: 1;
   padding: 1rem;
   background-color: #777;
+  overflow-y: auto;
 `;
 
 export default ({ items }) => (

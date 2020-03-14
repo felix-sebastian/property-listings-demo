@@ -8,7 +8,6 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-y: auto;
 `;
 
 export default () => {
