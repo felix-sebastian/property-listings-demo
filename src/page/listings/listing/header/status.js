@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import statuses from "../../../statuses";
 
 const Box = styled.div`
   display: flex;
@@ -15,24 +16,26 @@ const Dot = styled.div`
   display: inline-block;
 `;
 
-const Status = ({ color, text }) => (
-  <Box>
-    <span>{text}</span>
-    <Dot color={color} />
-  </Box>
-);
-
-export default ({ id }) => {
+const getColor = id => {
   switch (id) {
     case "current":
-      return <Status color={"green"} text={"Current"} />;
+      return "green";
     case "off_market":
-      return <Status color={"orange"} text={"Off Market"} />;
+      return "orange";
     case "sold":
-      return <Status color={"crimson"} text={"Sold"} />;
+      return "crimson";
     case "withdrawn":
-      return <Status color={"orange"} text={"Withdrawn"} />;
+      return "orange";
     default:
       return null;
   }
+};
+
+export default ({ id }) => {
+  return (
+    <Box>
+      <span>{statuses[id]}</span>
+      <Dot color={getColor(id)} />
+    </Box>
+  );
 };
