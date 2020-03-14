@@ -17,8 +17,8 @@ const Dot = styled.div`
 
 const Status = ({ color, text }) => (
   <Box>
-    <Dot color={color} />
     <span>{text}</span>
+    <Dot color={color} />
   </Box>
 );
 
