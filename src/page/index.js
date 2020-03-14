@@ -10,7 +10,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #777;
+  background-color: #45484e;
 `;
 
 export default () => {

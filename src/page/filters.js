@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import statuses from "../statuses";
+import statuses from "./statuses";
 
 const Box = styled.div`
   padding: 1rem;
-  background-color: #555;
+  background-color: #313335;
   color: #fff;
 `;
 
