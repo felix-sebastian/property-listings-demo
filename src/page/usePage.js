@@ -10,18 +10,19 @@ export default () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(propertiesUrl)
-      .then(result => {
+    (async () => {
+      try {
+        const result = await axios.get(propertiesUrl);
+
         if (result.status !== 200) setState("ERROR");
         else {
           setState("OK");
           setProperties(result.data);
         }
-      })
-      .catch(() => {
+      } catch {
         setState("ERROR");
-      });
+      }
+    })();
   }, []);
 
   return {
