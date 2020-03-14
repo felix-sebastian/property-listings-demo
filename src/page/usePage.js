@@ -26,7 +26,9 @@ export default () => {
 
   return {
     state,
-    properties,
+    properties: status
+      ? properties.filter(property => property.status === status)
+      : properties,
     status,
     setStatus
   };
