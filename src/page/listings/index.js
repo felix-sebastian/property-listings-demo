@@ -13,7 +13,7 @@ export default ({ items }) => (
   <Box>
     <Grid>
       {items.map(item => (
-        <Listing {...item} />
+        <Listing key={item.id} {...item} />
       ))}
     </Grid>
   </Box>
