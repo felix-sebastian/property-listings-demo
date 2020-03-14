@@ -4,6 +4,7 @@ import Filters from "./filters";
 import Listings from "./listings";
 import usePage from "./usePage";
 import Loading from "./loading";
+import Error from "./error";
 
 const Box = styled.div`
   display: flex;
@@ -14,11 +15,11 @@ const Box = styled.div`
 
 export default () => {
   const { state, properties, status, setStatus } = usePage();
-  if (state === "ERROR") return <>Error</>;
 
   return (
     <Box>
       {state === "LOADING" && <Loading />}
+      {state === "ERROR" && <Error />}
       {state === "OK" && (
         <>
           <Filters status={status} setStatus={setStatus} />
