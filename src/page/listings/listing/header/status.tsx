@@ -12,11 +12,11 @@ const Dot = styled.div`
   height: 0.5rem;
   border-radius: 50%;
   margin: 0.25rem;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color }: { color: string }) => color};
   display: inline-block;
 `;
 
-const getColor = id => {
+const getColor = (id: string): string => {
   switch (id) {
     case "current":
       return "green";
@@ -27,11 +27,11 @@ const getColor = id => {
     case "withdrawn":
       return "orange";
     default:
-      return null;
+      return "grey";
   }
 };
 
-export default ({ id }) => {
+export default ({ id }: { id: string }) => {
   return (
     <Box>
       <span>{statuses[id]}</span>

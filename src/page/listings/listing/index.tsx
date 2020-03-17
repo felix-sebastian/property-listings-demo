@@ -20,7 +20,23 @@ const Image = styled.img`
   object-position: center;
 `;
 
-export default ({ street, suburb, state, postcode, status, price, image }) => (
+export default ({
+  street,
+  suburb,
+  state,
+  postcode,
+  status,
+  price,
+  image
+}: {
+  street: string;
+  suburb: string;
+  state: string;
+  postcode: string;
+  status: string;
+  price: number;
+  image: string;
+}) => (
   <Box>
     <Header price={price} status={status} />
     <Image src={image} alt={`${street} ${suburb}`} />

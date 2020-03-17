@@ -26,7 +26,13 @@ const Inner = styled.div`
   }
 `;
 
-export default ({ status, setStatus }) => (
+export default ({
+  status,
+  setStatus
+}: {
+  status: string | null;
+  setStatus: Function;
+}) => (
   <Box>
     <Inner>
       <select
