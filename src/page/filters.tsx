@@ -36,6 +36,7 @@ export default ({
   <Box>
     <Inner>
       <select
+        data-testid="select"
         value={status || ""}
         onChange={event => setStatus(event.target.value || null)}
       >

@@ -39,7 +39,7 @@ export default ({
 }) => (
   <Box>
     <Header price={price} status={status} />
-    <Image src={image} alt={`${street} ${suburb}`} />
+    <Image data-testid="image" src={image} alt={`${street} ${suburb}`} />
     <Address
       street={street}
       suburb={suburb}

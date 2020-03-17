@@ -34,8 +34,8 @@ const getColor = (id: string): string => {
 export default ({ id }: { id: string }) => {
   return (
     <Box>
-      <span>{statuses[id]}</span>
-      <Dot color={getColor(id)} />
+      <span data-testid="text">{statuses[id] || ""}</span>
+      <Dot data-testid="dot" color={getColor(id)} />
     </Box>
   );
 };

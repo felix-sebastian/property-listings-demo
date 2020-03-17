@@ -10,7 +10,9 @@ const Box = styled.div`
 
 export default ({ price, status }: { price: number; status: string }) => (
   <Box>
-    <div>{currencyFormatter.format(price, { code: "AUD", precision: 0 })}</div>{" "}
+    <div data-testid="price">
+      {currencyFormatter.format(price, { code: "AUD", precision: 0 })}
+    </div>{" "}
     <Status id={status} />
   </Box>
 );
